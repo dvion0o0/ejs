@@ -2,18 +2,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
     <title>TODO</title>
 </head>
 <body>
-<h1> <%= kindofday %> </h1>
-<ul>
-   <% for(var i = 0; i < newListItems.length; i++){ %>
-<li><%= newListItems[i] %> </li>
-   <% } %>
-</ul>
- <form action="/" method="post">
-<input type="text" name="newitem">
-<button type="submit" name="button">Add</button>
-</form>
+    <div class="box" id="heading">
+        <h1> <%= kindofday %> </h1>
+    </div>
+
+    <div class="box">
+        <% for(var i = 0; i < newListItems.length; i++){ %>
+            <div class="item">
+                <input type="checkbox">
+                <p><%= newListItems[i] %></p>
+            </div>
+        <% } %>
+        <form action="/" method="post" class="item">
+       <input type="text" name="newitem" placeholder="New Item" autocomplete="off">
+       <button type="submit" name="button">+</button>
+       </form>
+    </div>
+
 </body>
 </html>
