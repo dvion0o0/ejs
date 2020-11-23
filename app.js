@@ -39,7 +39,7 @@ switch (currentDay) {
         break;
 }
 
-res.render('list', {day: 'Monday'});
+res.render('list', {day: "Monday"});
 });
 
 app.listen(8000, ()=> console.log('sevrer has started on port 8000'));
