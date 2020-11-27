@@ -69,7 +69,7 @@ res.redirect("/");
 
 app.post("/delete", (req,res) =>{
    const checkedId = req.body.checkbox; 
-list.findOneAndDelete(checkedId, (err) =>{
+list.findByIdAndRemove(checkedId, (err) =>{
     if(err) throw err;
     console.log("item deleted");
     res.redirect("/")
