@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-const url = "mongodb://localhost:27017/todolistDB";
+const url = "mongodb+srv://dvion0o0:Mynumber1@@cluster0.1u9rp.mongodb.net/todolistDB";
 
 app.use(bodyParser.urlencoded({extended:true}));
 
@@ -86,4 +86,4 @@ list.findOneAndDelete(checkedId, (err) =>{
 
 
 
-app.listen(8000, ()=> console.log('sevrer has started on port 8000'));
+app.listen(process.env.PORT || 8000, ()=> console.log('sevrer has started on port 8000'));
